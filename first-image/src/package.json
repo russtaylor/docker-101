@@ -1,0 +1,10 @@
+{
+  "name": "docker-tutorial",
+  "version": "0.0.1",
+  "description": "Extremely basic node.js app for learning Docker usage.",
+  "main": "app.js",
+  "author": "Russ Taylor <russ@russt.me>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

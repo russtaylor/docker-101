@@ -5,12 +5,14 @@ MAINTAINER Bend Hackers <bhg@bendhackers.com>
 # Set environment variables
 ENV APP_PATH /var/app
 
-# Run arbitrary commands
-RUN apt-get -y update
-RUN apt-get -y install ruby
+# Copy folders/files into the image
+COPY src $APP_PATH
 
 # Set the work directory
 WORKDIR $APP_PATH
 
+# Run arbitrary commands
+RUN npm install
+
 # Run when the container starts
-CMD ["app.rb", "-x"]
+CMD ["node", "app.js"]
