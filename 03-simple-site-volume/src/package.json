@@ -1,0 +1,12 @@
+{
+  "name": "simple-site-volume",
+  "version": "0.0.1",
+  "description": "Basic node.js site, on a volume, for Docker Learnage purposes.",
+  "main": "app.js",
+  "author": "Russ Taylor <russ@russt.me>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.15.2",
+    "nodemon": "1.11.0"
+  }
+}

@@ -12,7 +12,7 @@ docker build . -t hello-world-nodejs
 ```
 docker images
 ```
-* Try running your image. Note that running the image in docker is actually extremely quick.
+* Try running your image. Note that running the image in docker is super quick, not like launching a full VM.
 ```
 docker run hello-world-nodejs
 ```
@@ -44,3 +44,13 @@ docker stop simple-site
 ```
 docker rm simple-site
 ```
+
+## `simple-site-volume`
+
+* Start by installing node.js on your dev machine, if you don't have it. Instructions here: https://docs.npmjs.com/getting-started/installing-node (or use your package manager of choice)
+* Run `npm install` in the `03-simple-site-volume/src` directory.
+* Build the image:
+```
+docker build . -t simple-site-volume
+```
+* 
