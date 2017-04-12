@@ -27,7 +27,10 @@ docker build . -t hello-world-nodejs
 ``` 
 docker build . -t simple-site-nodejs
 ```
-* Now, run the image, in the background (`-d`), mapped to port 3000 on localhost (`-p 3000:3000`), with the name 'simple-site':
+* Now, run the image: 
+    * In the background (`-d`)
+    * Mapped to port 3000 on localhost (`-p 3000:3000`)
+    * With the name 'simple-site':
 ```
 docker run -d -p 3000:3000 --name simple-site simple-site-nodejs
 ```
@@ -53,4 +56,22 @@ docker rm simple-site
 ```
 docker build . -t simple-site-volume
 ```
-* 
+* Start the image:
+    * In the background (`-d`)
+    * Mapped to port 3000 (`-p 3000:3000`)
+    * Named 'simple-site-on-volume' (`--name simple-site-on-volume`)
+    * With this directory's `src` mounted to `/var/app` (`-v $(pwd)/src:/var/app`)
+```
+docker run -d -p 3000:3000 --name=simple-site-on-volume -v $(pwd)/src:/var/app simple-site-volume
+```
+* Access your tiny little site at http://localhost:3000 in your browser.
+* Update your `app.js` file - change the message on line 9.
+* Refresh your site at http://localhost:3000. Note that your site is updated, but you didn't have to rebuild the image!
+* Shut down the container:
+```
+docker stop simple-site-on-volume
+```
+* Remove your container: 
+```
+docker rm simple-site-on-volume
+```
