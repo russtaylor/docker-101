@@ -2,7 +2,7 @@
 
 This demo is meant to be run using the code from the 'master' branch. At some point, I may decide to use other branches to demonstrate different stages in the code. For now, however, everything here is what you get. 
 
-## `hello-world-nodejs`
+## 1 - `hello-world-nodejs`
 
 * Build your very first image:
 ```
@@ -21,7 +21,7 @@ docker run hello-world-nodejs
 docker build . -t hello-world-nodejs
 ```
 
-## `simple-site-nodejs`
+## 2 - `simple-site-nodejs`
 
 * Build the image with a simple web app:
 ``` 
@@ -48,7 +48,7 @@ docker stop simple-site
 docker rm simple-site
 ```
 
-## `simple-site-volume`
+## 3 - `simple-site-volume`
 
 * Start by installing node.js on your dev machine, if you don't have it. Instructions here: https://docs.npmjs.com/getting-started/installing-node (or use your package manager of choice)
 * Run `npm install` in the `03-simple-site-volume/src` directory.
@@ -75,3 +75,13 @@ docker stop simple-site-on-volume
 ```
 docker rm simple-site-on-volume
 ```
+
+## 4 - `docker-compose-wordpress`
+
+* Take a look at the `docker-compose.yml` file in this exercise's directory. It specifies two images: one for wordpress (that includes PHP), and one for mariadb (an implementation of MySQL).
+* Run `docker-compose up` in your terminal to bring up the containers.
+* Access http://localhost:8080 to show your brand-new site!
+* In the admin panel, enable the custom theme ('My Awesome Theme').
+* Make some changes to the theme on disk (in 'my-awesome-theme').
+* Refresh & watch them take effect.
+* Use `CTRL+C` in your terminal to shut down the containers.
