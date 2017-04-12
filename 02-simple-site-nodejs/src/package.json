@@ -1,10 +1,11 @@
 {
-  "name": "docker-tutorial",
+  "name": "simple-site-nodejs",
   "version": "0.0.1",
-  "description": "Extremely basic node.js app for learning Docker usage.",
+  "description": "Basic node.js site for Docker Learnage purposes.",
   "main": "app.js",
   "author": "Russ Taylor <russ@russt.me>",
   "license": "MIT",
   "dependencies": {
+    "express-generator"
   }
 }
