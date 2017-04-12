@@ -4,7 +4,7 @@ This demo is meant to be run using the code from the 'master' branch. At some po
 
 ## `hello-world-nodejs`
 
-* Demonstrates an extremely basic image build:
+* Build your very first image:
 ```
 docker build . -t hello-world-nodejs
 ```
@@ -22,3 +22,25 @@ docker build . -t hello-world-nodejs
 ```
 
 ## `simple-site-nodejs`
+
+* Build the image with a simple web app:
+``` 
+docker build . -t simple-site-nodejs
+```
+* Now, run the image, in the background (`-d`), mapped to port 3000 on localhost (`-p 3000:3000`), with the name 'simple-site':
+```
+docker run -d -p 3000:3000 --name simple-site simple-site-nodejs
+```
+* Access your 'site' by going to http://localhost:3000 in your browser.
+* Take a look at your running container: 
+```
+docker ps
+```
+* Shut down your container: 
+``` 
+docker stop simple-site
+```
+* Remove your container:
+```
+docker rm simple-site
+```

@@ -6,6 +6,6 @@
   "author": "Russ Taylor <russ@russt.me>",
   "license": "MIT",
   "dependencies": {
-    "express-generator"
+    "express": "4.15.2"
   }
 }
